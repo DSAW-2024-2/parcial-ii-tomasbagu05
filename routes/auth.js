@@ -10,7 +10,7 @@ const registeredUser = {
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
-router.post('/login', (req, res) => {
+router.post('/', (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {

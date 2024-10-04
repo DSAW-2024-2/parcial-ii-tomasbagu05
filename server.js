@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.use(express.json());
 
 //Usar los routers
-app.use('/auth', authRoutes);
+app.use('/login', authRoutes);
 app.use('/weather', weatherRoutes);
 
 app.use((req, res) => {
