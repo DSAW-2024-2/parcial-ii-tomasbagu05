@@ -4,6 +4,11 @@ const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const weatherRoutes = require('./routes/weather');
 
+app.get('/', (req, res) => {
+    res.json({ message: 'Endpoint Working'});
+
+});
+
 
 app.use(express.json());
 app.use(cors());
