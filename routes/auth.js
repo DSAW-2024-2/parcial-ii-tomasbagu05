@@ -8,7 +8,7 @@ const registeredUser = {
     password: "admin"
 };
 
-const JWT_SECRET = 'PARCIAL2';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 router.post('/login', (req, res) => {
     const { email, password } = req.body;
