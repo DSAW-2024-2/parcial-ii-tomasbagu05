@@ -1,10 +1,9 @@
 require('dotenv').config();
-app.use(express.json());
 const express = require('express');
 const app = express();
 
 const {router: authRoutes} = require('./routes/auth');
-const {router: weatherRoutes} = require('./routes/weather');
+const weatherRoutes = require('./routes/weather'); 
 
 app.get('/', (req, res) => {
     res.json({ message: 'Endpoint Working'});
