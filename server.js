@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 app.use(express.json());
 
 //Usar los routers
-app.use('/api/auth', authRoutes);
-app.use('/api/weather', weatherRoutes);
+app.use('/auth', authRoutes);
+app.use('/weather', weatherRoutes);
 
 app.use((req, res) => {
     res.status(404).json({ error: 'Not found' });
