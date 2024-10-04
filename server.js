@@ -2,7 +2,6 @@ require('dotenv').config();
 app.use(express.json());
 const express = require('express');
 const app = express();
-const cors = require('cors');
 
 const {router: authRoutes} = require('./routes/auth');
 const {router: weatherRoutes} = require('./routes/weather');
@@ -13,7 +12,6 @@ app.get('/', (req, res) => {
 });
 
 app.use(express.json());
-app.use(cors());
 
 //Usar los routers
 app.use('/api/auth', authRoutes);
