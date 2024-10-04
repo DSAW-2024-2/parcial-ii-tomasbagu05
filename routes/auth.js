@@ -11,16 +11,17 @@ const registeredUser = {
 const JWT_SECRET = 'PARCIAL2';
 
 router.post('/login', (req, res) => {
-    if (!req.body.email || !req.body.password) {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
         return res.status(400).json({ error: 'Email and password are required' });
     }
-    const { email, password } = req.body;
-    const user = registeredUsers.find(user => user.email === email && user.password === password);
-    if (user) { 
-        const token = jwt.sign({ email }, process.env.JWT_SECRET); 
-        res.status(200).json({ token });
+
+    if (email === registeredUser.email && password === registeredUser.password) {
+        const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1h' });
+        return res.status(200).json({ token });
     } else {
-        res.status(401).json({ error: 'Invalid credentials' });
+        return res.status(401).json({ error: 'Invalid credentials' });
     }
 });
 
