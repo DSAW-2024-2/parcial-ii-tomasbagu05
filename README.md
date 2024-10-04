@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Ihjz_szg)
 # Consultemos el clima
 
 Este proyecto consiste en un reto de desarrollo backend en el que debes crear una API REST utilizando el framework Express.js. El objetivo principal es que implementes un sistema de autenticación mediante token de sesión y un endpoint que consulte la API externa de Open Meteo para obtener la temperatura basándose en coordenadas geográficas.
@@ -7,7 +8,7 @@ Este proyecto consiste en un reto de desarrollo backend en el que debes crear un
 En este reto, debes crear un servidor Express.js que exponga dos endpoints principales:
 - `/login`: donde se autentican las credenciales de usuario y se devuelve un token de sesión válido.
 - `/weather`: que recibe las coordenadas de **latitud** y **longitud** como **query parameters**, consulta la API de Open Meteo, y devuelve la temperatura en la ubicación especificada. Este endpoint debe estar asegurado y solo puede accederse si se proporciona un token de sesión válido.
-
+DESPLEGADO: https://parcial-ii-tomasbagu05.vercel.app/
 ## Seguridad de Endpoints en Backend
 
 ### Objetivo
